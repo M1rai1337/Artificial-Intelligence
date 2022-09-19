@@ -1,11 +1,7 @@
-
-
-
 let header_menu = document.querySelector('.header__menu');
 let header_burger = document.querySelector('.header__burger');
 let body = document.body
 
-console.log(header_burger, header_menu)
 
 if (header_menu && header_burger){
    header_burger.addEventListener('click', () => {
@@ -52,7 +48,6 @@ dots.forEach( (dot, index) => {
       }
    })
 })
-
 
 /* ПЛАВНЫЙ СКОРЛ */
 
