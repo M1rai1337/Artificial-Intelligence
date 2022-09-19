@@ -1,0 +1,95 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&display=swap');
+@import url('http://fonts.cdnfonts.com/css/circular-std?styles=17909,17911');
+
+/* MIXIN FILE */
+
+@import '_mixins';
+
+/* OTHERS SCSS FILES*/
+
+@import '_reset.scss';
+@import '_header.scss';
+@import '_header-burger.scss';
+@import '_genaretion.scss';
+@import '_about.scss';
+@import '_blog.scss';
+@import '_slider.scss';
+@import '_footer.scss';
+
+/* COMMON STYLES */
+
+body{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    @include adaptiv-font(16, 14);
+    line-height: 160%;
+    color: #FFFFFF;
+    background-color: #020A18;
+}
+
+[class*="__container"]{
+    max-width: 1176px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+
+
+.btn{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #3A68B8;
+    border-radius: 5px;
+    transition: background-color .3s linear;
+
+    &:hover{
+        background-color: #2b549b;
+    }
+}
+
+.title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    @include adaptiv-font(54, 32);
+    line-height: 130%;
+    color: #fff;
+}
+
+
+@media (max-width: 1176px){
+    [class*="__container"]{
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 991.98px){
+    [class*="__container"]{
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767.98px){
+    [class*="__container"]{
+        max-width: none;
+    }
+}

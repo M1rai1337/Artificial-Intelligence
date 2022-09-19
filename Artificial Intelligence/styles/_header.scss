@@ -1,0 +1,156 @@
+.header{
+    background-color: #070F1B;
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    &::before{
+        content: '';
+        background-color: #070F1B;
+        width: 100%;
+        height: 100%;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &__body{
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo{
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        margin-right: 84px;
+
+        img{
+            margin-right: 16px;
+        }
+    }
+
+    &__logo-text{
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22.5455px;
+        line-height: 31px;
+        color: #3A68B8;
+    }
+
+    &__menu{
+        position: relative;
+        z-index: 3;
+        flex: 1 1 auto;
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+
+    &__item{
+        margin-right: 40px;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: -6px;
+            height: 3px;
+            width: calc(100% + 12px);
+            background-color: #3A68B8;
+            opacity: 0;
+            transition: opacity .3s linear;
+        }
+
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &__link{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+
+    &__btn{
+        position: relative;
+        z-index: 3;
+    }
+}
+
+.main{
+    padding-top: 100px;
+}
+
+
+@media (max-width: 1176px){
+    .header{
+        &__logo-text{
+            display: none;
+        }
+
+        &__logo{
+            margin-right: 0;
+
+            img{
+                margin-right: 0;
+            }
+        }
+
+        &__body{
+            justify-content: space-between;
+        }
+
+        &__menu{
+            flex: 0 0 auto
+        }
+    }
+}
+
+@media (max-width: 991.98px){
+    .header{
+        &__body{
+            height: 80px;
+        }
+    }
+
+    .main{
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .header{
+        &__body{
+            justify-content: start;
+        }
+
+        &__logo{
+            flex: 1 1 auto;
+        }
+    }
+}
