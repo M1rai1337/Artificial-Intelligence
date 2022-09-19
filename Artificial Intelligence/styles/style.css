@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-body.lock{
+body.lock {
   overflow: hidden;
 }
 
@@ -793,7 +793,7 @@ body.lock{
   display: flex;
   margin-bottom: 50px;
   position: relative;
-  left: -1146px;
+  left: -100%;
   -webkit-transition: left 0.5s linear;
   transition: left 0.5s linear;
 }
