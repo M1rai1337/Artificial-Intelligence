@@ -4,6 +4,10 @@
     }
 }
 
+body.lock{
+    overflow: hidden;
+}
+
 @media (max-width: 767.98px){
     .header{
         &__burger{
@@ -69,10 +73,6 @@
 
         &__menu.active{
             top: 0;
-        }
-
-        body.lock{
-            overflow: hidden;
         }
 
         &__btn{
